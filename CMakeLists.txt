@@ -23,8 +23,8 @@ set(XDNA_PKG_DIR      .)
 set(XDNA_PKG_LIB_DIR  ${XDNA_PKG_DIR}/${CMAKE_INSTALL_LIBDIR})
 set(XDNA_PKG_DATA_DIR ${XDNA_PKG_DIR}/${CMAKE_INSTALL_DATADIR}/${XDNA_COMPONENT})
 # Non-relocatable by ${CMAKE_INSTALL_PREFIX}
+set(XDNA_BIN_DIR      ${CMAKE_BINARY_DIR}/bins) # For saving all built artifacts for quick testing
 set(XDNA_PKG_FW_DIR   /usr/lib/firmware/amdnpu)
-set(XDNA_BIN_DIR      /bins) # For saving all built artifacts for quick testing
 message("-- XDNA_PKG_LIB_DIR=${XDNA_PKG_LIB_DIR}")
 message("-- XDNA_PKG_DATA_DIR=${XDNA_PKG_DATA_DIR}")
 message("-- XDNA_PKG_FW_DIR=${XDNA_PKG_FW_DIR}")

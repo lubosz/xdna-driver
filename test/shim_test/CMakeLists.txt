@@ -43,42 +43,42 @@ install(TARGETS ${XDNA_SHIM_TEST} DESTINATION ${XDNA_BIN_DIR}/bin)
 install(CODE "execute_process( \
   COMMAND ${CMAKE_COMMAND} -E create_symlink \
   ${AMDXDNA_BINS_DIR}/workspaces/NPU1_1x4_TESTCASES \
-  ${CMAKE_BINARY_DIR}/${XDNA_BIN_DIR}/npu1_workspace \
+  ${XDNA_BIN_DIR}/npu1_workspace \
   )"
   )
 
 install(CODE "execute_process( \
   COMMAND ${CMAKE_COMMAND} -E create_symlink \
   ${AMDXDNA_BINS_DIR}/workspaces/NPU2_1x4_TESTCASES \
-  ${CMAKE_BINARY_DIR}/${XDNA_BIN_DIR}/npu2_workspace \
+  ${XDNA_BIN_DIR}/npu2_workspace \
   )"
   )
 
 install(CODE "execute_process( \
   COMMAND ${CMAKE_COMMAND} -E create_symlink \
   ${AMDXDNA_BINS_DIR}/workspaces/NPU3_1x4_TESTCASES \
-  ${CMAKE_BINARY_DIR}/${XDNA_BIN_DIR}/npu3_workspace \
+  ${XDNA_BIN_DIR}/npu3_workspace \
   )"
   )
 
 install(CODE "execute_process( \
   COMMAND ${CMAKE_COMMAND} -E create_symlink \
   ${AMDXDNA_BINS_DIR}/workspaces/NPU4_1x4_TESTCASES \
-  ${CMAKE_BINARY_DIR}/${XDNA_BIN_DIR}/npu4_workspace \
+  ${XDNA_BIN_DIR}/npu4_workspace \
   )"
   )
 
 install(CODE "execute_process( \
   COMMAND ${CMAKE_COMMAND} -E create_symlink \
   ${AMDXDNA_BINS_DIR}/workspaces/NPU5_1x4_TESTCASES \
-  ${CMAKE_BINARY_DIR}/${XDNA_BIN_DIR}/npu5_workspace \
+  ${XDNA_BIN_DIR}/npu5_workspace \
   )"
   )
 
 install(CODE "execute_process( \
   COMMAND ${CMAKE_COMMAND} -E create_symlink \
   ${AMDXDNA_BINS_DIR}/workspaces/NPU6_1x4_TESTCASES \
-  ${CMAKE_BINARY_DIR}/${XDNA_BIN_DIR}/npu6_workspace \
+  ${XDNA_BIN_DIR}/npu6_workspace \
   )"
   )
 
@@ -87,7 +87,7 @@ set(XDNA_SHIM_TEST_DATA_DIR local_shim_test_data)
 install(CODE "execute_process( \
   COMMAND ${CMAKE_COMMAND} -E create_symlink \
   ${AMDXDNA_BINS_DIR}/${XDNA_SHIM_TEST_DATA_DIR} \
-  ${CMAKE_BINARY_DIR}/${XDNA_BIN_DIR}/${XDNA_SHIM_TEST_DATA_DIR} \
+  ${XDNA_BIN_DIR}/${XDNA_SHIM_TEST_DATA_DIR} \
   )"
   )
 
@@ -95,7 +95,7 @@ install(CODE "execute_process( \
 add_custom_target(find_preemption_libs ALL
   COMMAND ${CMAKE_COMMAND}
   -DSEARCH_PATH=${XRT_SUBMOD_BINARY_DIR}
-  -DBIN_DIR=${CMAKE_BINARY_DIR}/${XDNA_BIN_DIR}
+  -DBIN_DIR=${XDNA_BIN_DIR}
   -P ${CMAKE_SOURCE_DIR}/CMake/install_preemption_libs.cmake
   DEPENDS ${XDNA_SHIM_TEST}
   )
